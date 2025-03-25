@@ -1,0 +1,14 @@
+@if (checkAuthStatus) {
+<div class="container">
+  <app-add-product (productAdded)="onProductAdded($event)"></app-add-product>
+</div>
+}
+<div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center row">
+      <div class="col-md-10">
+        @for(product of products(); track product.id) {
+          <app-product-card [product]="product" class="row p-2 bg-white border rounded"></app-product-card>
+        }
+    </div>
+  </div>
+</div>

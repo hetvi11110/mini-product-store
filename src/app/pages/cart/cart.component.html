@@ -1,0 +1,13 @@
+<section class="vh-100">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <p><span class="h2">Shopping Cart </span></p>
+        @for(items of cartService.cart(); track items.id) {
+          <app-cart-product [items]="items" class="card mb-4"></app-cart-product>
+        }
+        <app-cart-summary class="card mb-5"></app-cart-summary>
+      </div>
+    </div>
+  </div>
+</section>
