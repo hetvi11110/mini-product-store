@@ -4,6 +4,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './pages/login/login.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 export const routes: Routes = [
   {
@@ -24,4 +25,9 @@ export const routes: Routes = [
     component: DashboardComponent,
     canActivate: [AuthGuard]
   },
+  {
+    path: 'add-product',
+    component: AddProductComponent,
+    canActivate: [AuthGuard]
+  }
 ];

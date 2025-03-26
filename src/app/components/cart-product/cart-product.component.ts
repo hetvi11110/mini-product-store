@@ -1,20 +1,17 @@
 import { Component, inject, input } from '@angular/core';
-import { Product } from '../../models/product.model';
+import {  CartItem } from '../../models/cartItem.model';
 import { CartService } from '../../services/cart.service';
+import { CurrencyPipe } from "@angular/common";
 
 @Component({
   selector: 'app-cart-product',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './cart-product.component.html',
   styleUrl: './cart-product.component.css'
 })
 export class CartProductComponent {
-  items = input.required<Product>();
+  items = input.required<CartItem>();
 
   cartService = inject(CartService);
 
-  // removeFromCart(id: number) {
-  //   console.log("in");
-  //   this.cartService.removeFromCart(id);
-  // }
 }

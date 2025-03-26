@@ -12,13 +12,13 @@
       <div class="col-md-2 d-flex justify-content-center">
         <div>
           <p class="small text-muted mb-4 pb-2">Quantity</p>
-          <p class="lead fw-normal mb-0">1</p>
+          <p class="lead fw-normal mb-0">{{ items().quantity }}</p>
         </div>
       </div>
       <div class="col-md-2 d-flex justify-content-center">
         <div>
           <p class="small text-muted mb-4 pb-2">Total</p>
-          <p class="lead fw-normal mb-0">{{ items().price}}</p>
+          <p class="lead fw-normal mb-0">{{ items().price | currency }} <p>
         </div>
       </div >
       <div class="col-md-2 d-flex justify-content-center">

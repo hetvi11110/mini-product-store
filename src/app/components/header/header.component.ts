@@ -1,11 +1,12 @@
 import { Component, computed, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { TitleCasePipe } from "@angular/common";
 import { AuthService } from '../../services/auth.service';
 import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [TitleCasePipe, RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -28,6 +29,6 @@ export class HeaderComponent {
     this.authService.logout();
   }
 
-  cartLabel = computed(() => `Cart (${this.cartService.cart().length})`);
+  cartLabel = computed(() => `Cart (${this.cartService.getTotalQuantity()})`);
 
 }

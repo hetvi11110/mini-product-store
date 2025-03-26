@@ -16,10 +16,4 @@ export class CartComponent {
 
   cart = computed(() => this.cartService.cart);
 
-  // totalPrice = computed(() =>
-  //   this.cart().reduce((sum, item) => sum + item.price, 0)
-  // );
-
-
-
 }

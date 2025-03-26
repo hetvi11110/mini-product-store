@@ -7,9 +7,10 @@
     </div>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a routerLink="/" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a routerLink="/dashboard" class="nav-link px-2">Dashboard</a></li>
-      <li><a routerLink="/cart"  class="nav-link px-2"> {{cartLabel() }}</a></li>
+      <li><a routerLink="/" class="nav-link px-2" routerLinkActive="link-secondary" [routerLinkActiveOptions]="{exact: true}">{{ 'Home'  | titlecase }}</a></li>
+      <li><a routerLink="/dashboard" class="nav-link px-2" routerLinkActive="link-secondary" [routerLinkActiveOptions]="{exact: true}">{{ 'Dashboard'  | titlecase }}</a></li>
+      <li><a routerLink="/add-product" class="nav-link px-2" routerLinkActive="link-secondary" [routerLinkActiveOptions]="{exact: true}">{{ 'Add Product'  | titlecase }}</a></li>
+      <li><a routerLink="/cart"  class="nav-link px-2" routerLinkActive="link-secondary" [routerLinkActiveOptions]="{exact: true}"> {{cartLabel() }}</a></li>
     </ul>
 
     <div class="col-md-3 text-end">
